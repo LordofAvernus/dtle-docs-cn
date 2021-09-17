@@ -1,6 +1,9 @@
+BRANCH := $(shell sh -c 'git rev-parse --abbrev-ref HEAD')
+
 default: gitbook_build publish
 default_with_pdf: default gitbook_pdf_commit
 publish: publish_prepare publish_push
+
 
 gitbook_preview:
 	docker run --rm -v "${PWD}":/gitbook -p 4000:4000 billryan/gitbook:zh-hans gitbook serve
@@ -25,5 +28,5 @@ publish_prepare:
 	git commit -a -m "Update docs"
 
 publish_push:
-	git push origin gh-pages
-	git checkout master
+	#git push origin gh-pages
+	git checkout $(BRANCH)
