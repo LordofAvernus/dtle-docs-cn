@@ -1,8 +1,8 @@
 dist: trusty
 env:
   global:
-    - GH_REF: github.com/actiontech/dtle-docs-cn
-    - GH_USER: actiontech-bot
+    - GH_REF: https://github.com/LordofAvernus/dtle-docs-cn
+    - GH_USER: yangzhongjiao-bot
     - GH_MAIL: github@actionsky.com
 
 
