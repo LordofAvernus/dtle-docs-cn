@@ -1,9 +1,9 @@
-BRANCH := $(shell sh -c 'git rev-parse --abbrev-ref HEAD')
+VERSION       = 3.21.08.0
 
 default: gitbook_build publish
 default_with_pdf: default gitbook_pdf_commit
 publish: publish_prepare publish_push
-
+update_pdf:gitbook_build gitbook_pdf_commit
 
 gitbook_preview:
 	docker run --rm -v "${PWD}":/gitbook -p 4000:4000 billryan/gitbook:zh-hans gitbook serve
@@ -28,5 +28,9 @@ publish_prepare:
 	git commit -a -m "Update docs"
 
 publish_push:
-	#git push origin gh-pages
-	git checkout $(BRANCH)
+	git push origin gh-pages
+	git checkout master
+
+upload:
+	curl --ftp-create-dirs -T $(shell pwd)/dtle-manual.pdf ftp://ftpadmin:KFQsB9g0aut7@10.186.18.90/actiontech-dtle/doc-cn/dtle-manual-${VERSION}.pdf
+
