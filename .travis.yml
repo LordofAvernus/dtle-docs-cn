@@ -2,8 +2,8 @@ dist: trusty
 env:
   global:
     - GH_REF: github.com/LordofAvernus/dtle-docs-cn
-    - GH_USER: yangzhongjiao-bot
-    - GH_MAIL: github@actionsky.com
+    - GH_USER: yangzhongjiao
+    - GH_MAIL: 451773851@qq.com
 
 
 # 指定环境语言
