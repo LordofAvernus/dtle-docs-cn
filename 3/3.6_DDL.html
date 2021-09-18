@@ -1,0 +1,1033 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.6.DDL支持度 · dtle manual</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ActionTech">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.7_DCL.html" />
+    
+    
+    <link rel="prev" href="3.5_deployment.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../0/0_overview.html">
+            
+                <a href="../0/0_overview.html">
+            
+                    
+                    0.概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    1.适用场景
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../1/1.0_mysql_replication.html">
+            
+                <a href="../1/1.0_mysql_replication.html">
+            
+                    
+                    1.0.MySQL的单向复制/聚合/分散
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../1/1.1_bidirectional_replication.html">
+            
+                <a href="../1/1.1_bidirectional_replication.html">
+            
+                    
+                    1.1.跨数据中心的双向复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../1/1.2_sync_between_cloud.html">
+            
+                <a href="../1/1.2_sync_between_cloud.html">
+            
+                    
+                    1.2.公有云间的数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../1/1.3_mysql_kafka.html">
+            
+                <a href="../1/1.3_mysql_kafka.html">
+            
+                    
+                    1.3.MySQL到Kafka的数据变更通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    2.快速开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2/2.0_mysql_replication_1_1.html">
+            
+                <a href="../2/2.0_mysql_replication_1_1.html">
+            
+                    
+                    2.0.MySQL的单向复制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../2/2.0.1_interface.html">
+            
+                <a href="../2/2.0.1_interface.html">
+            
+                    
+                    2.0.1.HTTP API、nomad 命令行工具 和 Web界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2/2.1_mysql_replication_n_1.html">
+            
+                <a href="../2/2.1_mysql_replication_n_1.html">
+            
+                    
+                    2.1.MySQL的聚合复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../2/2.2_mysql_replication_1_n.html">
+            
+                <a href="../2/2.2_mysql_replication_1_n.html">
+            
+                    
+                    2.2.MySQL的数据分散
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../2/2.3_dc_to_dc_bidirectional.html">
+            
+                <a href="../2/2.3_dc_to_dc_bidirectional.html">
+            
+                    
+                    2.3.MySQL的跨数据中心的双向复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../2/2.4_ali_to_jd.html">
+            
+                <a href="../2/2.4_ali_to_jd.html">
+            
+                    
+                    2.4.阿里云到京东云的MySQL复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../2/2.5_mysql_kafka.html">
+            
+                <a href="../2/2.5_mysql_kafka.html">
+            
+                    
+                    2.5.MySQL到Kafka的数据变更通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../2/2.6_multi_node.html">
+            
+                <a href="../2/2.6_multi_node.html">
+            
+                    
+                    2.6.多nomad server部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    3.功能说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="3.0_function_scenario_mapping.html">
+            
+                <a href="3.0_function_scenario_mapping.html">
+            
+                    
+                    3.0.功能/场景的映射列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="3.1_limitation.html">
+            
+                <a href="3.1_limitation.html">
+            
+                    
+                    3.1.使用限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3.2_ports.html">
+            
+                <a href="3.2_ports.html">
+            
+                    
+                    3.2.端口使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="3.3_impact_on_dest.html">
+            
+                <a href="3.3_impact_on_dest.html">
+            
+                    
+                    3.3.对目标端数据库的影响(gtid_executed表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="3.4_metrics.html">
+            
+                <a href="3.4_metrics.html">
+            
+                    
+                    3.4.监控项说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="3.5_deployment.html">
+            
+                <a href="3.5_deployment.html">
+            
+                    
+                    3.5.部署结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.7" data-path="3.6_DDL.html">
+            
+                <a href="3.6_DDL.html">
+            
+                    
+                    3.6.DDL支持度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="3.7_DCL.html">
+            
+                <a href="3.7_DCL.html">
+            
+                    
+                    3.7.DCL支持度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="3.8_dtle_mapping.html">
+            
+                <a href="3.8_dtle_mapping.html">
+            
+                    
+                    3.8.dtle mapping支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="3.9_binlog_relay.html">
+            
+                <a href="3.9_binlog_relay.html">
+            
+                    
+                    3.9.Binlog Relay (中继)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="3.10_consul.html">
+            
+                <a href="3.10_consul.html">
+            
+                    
+                    3.10.consul 上的 job 数据管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="3.11_delay.html">
+            
+                <a href="3.11_delay.html">
+            
+                    
+                    3.11.延迟监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    4.安装/配置说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../4/4.0_installation.html">
+            
+                <a href="../4/4.0_installation.html">
+            
+                    
+                    4.0.安装步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../4/4.1_node_configuration.html">
+            
+                <a href="../4/4.1_node_configuration.html">
+            
+                    
+                    4.1.节点配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../4/4.2_command.html">
+            
+                <a href="../4/4.2_command.html">
+            
+                    
+                    4.2.命令说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../4/4.3_job_configuration.html">
+            
+                <a href="../4/4.3_job_configuration.html">
+            
+                    
+                    4.3.作业(job)配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../4/4.3.1_tuning.html">
+            
+                <a href="../4/4.3.1_tuning.html">
+            
+                    
+                    4.3.1.性能调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../4/4.3.2_job_sample.html">
+            
+                <a href="../4/4.3.2_job_sample.html">
+            
+                    
+                    4.3.2.Job示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../4/4.4_http_api.html">
+            
+                <a href="../4/4.4_http_api.html">
+            
+                    
+                    4.4.HTTP API说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../4/4.4.1_dtle_http_api.html">
+            
+                <a href="../4/4.4.1_dtle_http_api.html">
+            
+                    
+                    4.4.1.dtle 3.x HTTP API说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../4/4.5_mysql_user_privileges.html">
+            
+                <a href="../4/4.5_mysql_user_privileges.html">
+            
+                    
+                    4.5.MySQL 用户权限说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../4/4.6_dtle_2to3.html">
+            
+                <a href="../4/4.6_dtle_2to3.html">
+            
+                    
+                    4.6.dtle 2升级到3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../4/4.7_diagnosing.html">
+            
+                <a href="../4/4.7_diagnosing.html">
+            
+                    
+                    4.7.问题诊断 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    5.设计说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../5/5.1_resource_estimation.html">
+            
+                <a href="../5/5.1_resource_estimation.html">
+            
+                    
+                    5.1.时间/资源估算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../5/5.2_architecture.html">
+            
+                <a href="../5/5.2_architecture.html">
+            
+                    
+                    5.2 基本架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../5/5.3_kafka_message_format.html">
+            
+                <a href="../5/5.3_kafka_message_format.html">
+            
+                    
+                    5.3 Kafka 消息格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../6/howto_contribute.html">
+            
+                <a href="../6/howto_contribute.html">
+            
+                    
+                    6.如何参与
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../7/7_roadmap.html">
+            
+                <a href="../7/7_roadmap.html">
+            
+                    
+                    7.路线图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.6.DDL支持度</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ddl&#x652F;&#x6301;&#x5EA6;">DDL&#x652F;&#x6301;&#x5EA6;</h1>
+<ul>
+<li>&#x4EE5;table&#x4E3A;&#x5BF9;&#x8C61;&#x7684;DDL</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>DDL&#x7C7B;&#x578B;</th>
+<th>DDL&#x8BED;&#x53E5;&#x793A;&#x4F8B;</th>
+<th>&#x662F;&#x5426;&#x652F;&#x6301;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6DFB;&#x52A0;&#x5217;</td>
+<td>alter table sbtest1 add c_blob blob;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;&#x5217;</td>
+<td>alter table sbtest1 drop pad;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x66F4;&#x6539;&#x8868;&#x540D;</td>
+<td>alter table sbtest1 rename rename test1;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x66F4;&#x6539;&#x5217;&#x540D;</td>
+<td>alter table sbtest1 change k z int(10) DEFAULT NULL;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x66F4;&#x6539;&#x5217;&#x540D;&#x548C;&#x7C7B;&#x578B;</td>
+<td>alter table sbtest1 change k z bigint DEFAULT NULL;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x66F4;&#x6539;&#x5217;&#x7C7B;&#x578B;</td>
+<td>alter table sbtest1 modify k bigint DEFAULT NULL;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x6DFB;&#x52A0;index</td>
+<td>alter table sbtest1 add index index_c(c);</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x6DFB;&#x52A0; unique index</td>
+<td>alter table t_mod add constraint UK unique(m);</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664; unique index</td>
+<td>alter table t_mod drop index UK;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x6DFB;&#x52A0;primary key</td>
+<td>alter table t_mod add constraint PK primary key(id);</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;primary key</td>
+<td>alter table t_mod drop primary key;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x6DFB;&#x52A0;fulltext index</td>
+<td>alter table t_mod add fulltext index last_name_index(last_name)</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;fulltext index</td>
+<td>alter table t_mod drop index last_name_index;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x6DFB;&#x52A0; foreign key</td>
+<td>alter table t_add_foreign_key add constraint FK foreign key(id) references t_add_column(id_name);</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;foreign key</td>
+<td>alter table t_add_foreign_key drop foreign key FK;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x521B;&#x5EFA;index</td>
+<td>create index t_test on t_add_column(a);</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>&#x6DFB;&#x52A0; partition</td>
+<td>alter table part_tab add partition (partition p11 values less than (2012));</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#xFF1A;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5BF9;&#x8C61;</th>
+<th>&#x5168;&#x91CF;</th>
+<th>&#x589E;&#x91CF;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>procedure</td>
+<td><a href="https://github.com/actiontech/dtle/issues/356" target="_blank">&#x4E0D;&#x652F;&#x6301;</a></td>
+<td>&#x652F;&#x6301;create&#xFF0C;alter&#xFF0C;drop&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E0D;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;&#x60C5;&#x51B5;<a href="https://github.com/actiontech/dtle/issues/357" target="_blank">#357</a></td>
+<td>&#x521B;&#x5EFA;&#x5E93;&#x7EA7;&#x522B;&#x8FC1;&#x79FB;&#xFF0C;&quot;ExpandSyntaxSupport&quot;: true</td>
+</tr>
+<tr>
+<td>function</td>
+<td><a href="https://github.com/actiontech/dtle/issues/356" target="_blank">&#x4E0D;&#x652F;&#x6301;</a></td>
+<td>&#x652F;&#x6301;create&#xFF0C;alter&#xFF0C;drop&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E0D;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;&#x60C5;&#x51B5;<a href="https://github.com/actiontech/dtle/issues/357" target="_blank">#357</a></td>
+<td>&#x521B;&#x5EFA;&#x5E93;&#x7EA7;&#x522B;&#x8FC1;&#x79FB;&#xFF0C;&quot;ExpandSyntaxSupport&quot;: true&#xFF0C;mysql&gt;<code>set global log_bin_trust_function_creators=1;</code></td>
+</tr>
+<tr>
+<td>view</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+<td></td>
+</tr>
+<tr>
+<td>trigger</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+<td>&#x76EE;&#x524D;&#x7531;&#x4E8E;ddl&#x89E3;&#x6790;&#x95EE;&#x9898;&#xFF0C;dtle&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x8DF3;&#x8FC7;trigger ddl&#xFF0C;&#x6E90;&#x7AEF;&#x6267;&#x884C;&#x7684;&#x6240;&#x6709;ddl&#x90FD;&#x4F1A;&#x88AB;&#x53D1;&#x9001;&#x7ED9;&#x76EE;&#x6807;&#x7AEF;&#x3002;&#x4E3A;&#x786E;&#x4FDD;&#x7A33;&#x5B9A;&#x6027;&#x53CA;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x5E94;&#x907F;&#x514D;&#x5728;&#x6E90;&#x7AEF;&#x6267;&#x884C;&#x4EFB;&#x4F55;trigger ddl&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x76EE;&#x6807;&#x7AEF;&#x6267;&#x884C;trigger&#xFF08;<a href="https://github.com/actiontech/dtle/issues/577" target="_blank">#577</a>&#xFF09;</td>
+</tr>
+<tr>
+<td>event</td>
+<td>&#xFF08;&#x7531;&#x4E8E;event&#x7684;&#x7279;&#x6B8A;&#x6027;&#xFF0C;&#x5168;&#x91CF;&#x4E2D;event&#x867D;&#x7136;&#x672A;&#x8FC1;&#x79FB;&#x81F3;&#x76EE;&#x6807;&#x7AEF;&#xFF0C;&#x4F46;&#x4E0D;&#x5F71;&#x54CD;src&#x548C;dest&#x6570;&#x636E;&#x4E00;&#x81F4;&#xFF0C;&#x589E;&#x91CF;&#x4E2D;&#x51FA;&#x73B0;&#x7684;event&#x53EF;&#x4EE5;&#x8FC1;&#x79FB;&#x81F3;dest&#xFF09;</td>
+<td>&#x652F;&#x6301;create&#xFF0C;alter&#xFF0C;drop&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E0D;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;&#x60C5;&#x51B5;<a href="https://github.com/actiontech/dtle/issues/357" target="_blank">#357</a></td>
+<td>&#x521B;&#x5EFA;&#x5E93;&#x7EA7;&#x522B;&#x8FC1;&#x79FB;&#xFF0C;&quot;ExpandSyntaxSupport&quot;: true&#xFF0C;&#x5728;&#x6E90;&#x7AEF;&#x5F00;&#x542F; mysql&gt;<code>set global event_scheduler=1</code>&#xFF0C;&#x76EE;&#x6807;&#x7AEF;event_scheduler&#x4E0D;&#x5E94;&#x5F00;&#x542F;</td>
+</tr>
+</tbody>
+</table>
+<p>job.json &#x914D;&#x7F6E;&#x6837;&#x4F8B;&#xFF1A;</p>
+<pre><code>{
+    &quot;Name&quot;:&quot;test_function&quot;,
+    &quot;Tasks&quot;:[
+        {
+            &quot;Type&quot;:&quot;Src&quot;,
+            &quot;Config&quot;:{
+                &quot;Gtid&quot;:&quot;&quot;,
+                &quot;ExpandSyntaxSupport&quot;:true,
+                &quot;ReplicateDoDb&quot;:[
+                    {
+                        &quot;TableSchema&quot;:&quot;functiontest&quot;,
+                        &quot;Tables&quot;:[]
+                    }
+                ],
+                &quot;ConnectionConfig&quot;:{ ... }
+            }
+        }, {
+            &quot;Type&quot;:&quot;Dest&quot;,
+            &quot;Config&quot;:{
+                &quot;ConnectionConfig&quot;:{ ... }
+            }
+        }
+    ]
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.5_deployment.html" class="navigation navigation-prev " aria-label="Previous page: 3.5.部署结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.7_DCL.html" class="navigation navigation-next " aria-label="Next page: 3.7.DCL支持度">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.6.DDL支持度","level":"1.5.7","depth":2,"next":{"title":"3.7.DCL支持度","level":"1.5.8","depth":2,"path":"3/3.7_DCL.md","ref":"3/3.7_DCL.md","articles":[]},"previous":{"title":"3.5.部署结构","level":"1.5.6","depth":2,"path":"3/3.5_deployment.md","ref":"3/3.5_deployment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dtle manual","gitbook":"*"},"file":{"path":"3/3.6_DDL.md","mtime":"2021-09-18T06:42:29.704Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-18T06:43:40.802Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
